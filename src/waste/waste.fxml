@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="waste.wasteController">
+   <children>
+      <TableView fx:id="tableView" layoutX="4.0" layoutY="157.0" prefHeight="229.0" prefWidth="593.0">
+         <columns>
+            <TableColumn fx:id="codeCol" prefWidth="158.0" text="Waste Item Code" />
+            <TableColumn fx:id="qtyCol" prefWidth="253.0" text="Waste Item Quantity" />
+            <TableColumn fx:id="timeCol" minWidth="0.0" prefWidth="181.0" text="Time" />
+         </columns>
+      </TableView>
+      <TextField fx:id="textItemcode" layoutX="67.0" layoutY="64.0" prefHeight="25.0" prefWidth="143.0" promptText="Item Code" />
+      <TextField fx:id="textItemQty" layoutX="250.0" layoutY="64.0" promptText="Item Quantity" />
+      <Button fx:id="addWasteButton" layoutX="468.0" layoutY="64.0" mnemonicParsing="false" onAction="#addWaste" text="Add to Waste" />
+   </children>
+</AnchorPane>

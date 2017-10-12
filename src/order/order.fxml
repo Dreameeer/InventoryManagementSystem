@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="order.orderController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Orders">
+               <HBox.margin>
+                  <Insets left="250.0" top="25.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Arial Narrow Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <TableView fx:id="tableID1" onMouseClicked="#onClick" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="OrderID" prefWidth="75.0" text="Order ID" />
+          <TableColumn fx:id="OrderDate" prefWidth="100.0" text="Order  Date" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </left>
+   <right>
+      <TableView fx:id="tableID2" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="iCode" prefWidth="75.0" text="Item Code" />
+          <TableColumn fx:id="iName" prefWidth="75.0" text="Item Name" />
+            <TableColumn fx:id="Supplier" prefWidth="75.0" text="SupplierName" />
+            <TableColumn fx:id="OrderQuantity" prefWidth="75.0" text="OrderQuantity" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </right>
+</BorderPane>

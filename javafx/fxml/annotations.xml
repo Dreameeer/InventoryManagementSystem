@@ -1,0 +1,5 @@
+<root>
+    <item name='javafx.fxml.Initializable'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

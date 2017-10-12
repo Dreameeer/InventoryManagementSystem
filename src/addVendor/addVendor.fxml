@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addVendor.addVendorController">
+   <children>
+      <TableView fx:id="tableView" layoutX="4.0" layoutY="157.0" prefHeight="229.0" prefWidth="593.0">
+        <columns>
+          <TableColumn fx:id="supIdCol" prefWidth="98.0" text="Supplier ID" />
+          <TableColumn fx:id="supNameCol" minWidth="0.0" prefWidth="156.0" text="Supplier Name" />
+            <TableColumn fx:id="supAddCol" minWidth="8.0" prefWidth="203.0" text="Address" />
+            <TableColumn fx:id="supPhnCol" prefWidth="135.0" text="Phone. No." />
+        </columns>
+      </TableView>
+      <TextField fx:id="textSupID" layoutX="14.0" layoutY="46.0" prefHeight="25.0" prefWidth="82.0" promptText="Supplier ID" />
+      <TextField fx:id="textSupName" layoutX="105.0" layoutY="46.0" promptText="Supplier Name" />
+      <TextField fx:id="textAdd" layoutX="261.0" layoutY="46.0" prefHeight="25.0" prefWidth="169.0" promptText="Address" />
+      <TextField fx:id="textPhone" layoutX="447.0" layoutY="46.0" promptText="Phone. No." />
+      <Button fx:id="addVendorButton" layoutX="260.0" layoutY="104.0" mnemonicParsing="false" onAction="#addMember" text="Add Vendor" />
+   </children>
+</AnchorPane>

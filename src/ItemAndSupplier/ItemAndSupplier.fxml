@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ItemAndSupplier.ItemAndSupplierController">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="270.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ItemName" wrappingWidth="92.564453125">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="ItemName" editable="false" promptText="Select Item from the Item Table" text="Select Item from the Item List Table" />
+               </children>
+               <HBox.margin>
+                  <Insets right="3.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="253.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Name">
+                     <VBox.margin>
+                        <Insets left="2.0" top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="SupplierName" editable="false" prefHeight="25.0" prefWidth="205.0" promptText="Select Supplier from the Supplier List table" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Button fx:id="btnAddItemSupplier" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addItemSupplier" prefHeight="55.0" prefWidth="76.0" text="Add Item Supplier" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <VBox prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="40.0" prefWidth="600.0">
+               <children>
+                  <Text layoutX="244.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item and Supplier list" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="tableID1" prefHeight="200.0" prefWidth="600.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="iCode1" prefWidth="75.0" text="Item Code" />
+                  <TableColumn fx:id="iName1" prefWidth="75.0" text="Item Name" />
+                  <TableColumn fx:id="supIdCol1" prefWidth="75.0" text="SupplierID" />
+                  <TableColumn fx:id="supNameCol1" prefWidth="78.0" text="SupplierName" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnAddItems" mnemonicParsing="false" onAction="#addItemButton" text="Add Items">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="1.0" top="50.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnAddSupplier" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addVendor" text="Add Supplier">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="1.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnRefresh" layoutX="20.0" layoutY="105.0" mnemonicParsing="false" onAction="#Refresh" text="Refresh">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="171.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item List table" textAlignment="CENTER" wrappingWidth="248.56640625" />
+            <TableView fx:id="tableID" onMouseClicked="#onClick">
+              <columns>
+                <TableColumn fx:id="iCode" prefWidth="75.0" text="ItemCode" />
+                <TableColumn fx:id="iName" prefWidth="75.0" text="ItemName" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="145.0" prefWidth="247.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select Supplier from SupplierList Table" textAlignment="CENTER" wrappingWidth="253.1640625" />
+            <TableView fx:id="tableView" onMouseClicked="#onClickSupplier">
+              <columns>
+                <TableColumn fx:id="supIdCol" prefWidth="75.0" text="SupplierCode" />
+                <TableColumn fx:id="supNameCol" prefWidth="75.0" text="Supplier Name" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

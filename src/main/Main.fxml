@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="closeMenu" mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Add">
+                  <items>
+                        <MenuItem fx:id="addItemMenu" mnemonicParsing="false" text="Add Items" />
+                    <MenuItem fx:id="addVendorMenu" mnemonicParsing="false" text="Add Vendor" />
+                        <MenuItem fx:id="viewAuthorizedUserMenu" mnemonicParsing="false" text="Add Authorized User" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="View">
+                  <items>
+                    <MenuItem fx:id="viewItemMenu" mnemonicParsing="false" text="View Items" />
+                        <MenuItem fx:id="addAuthorizedUserMenu" mnemonicParsing="false" text="View Authorized Users" />
+                        <MenuItem fx:id="viewVendorsMenu" mnemonicParsing="false" text="View Vendors" />
+                        <MenuItem fx:id="viewOrderlistMenu" mnemonicParsing="false" text="View Order List" />
+                        <MenuItem fx:id="viewWasteMenu" mnemonicParsing="false" text="View Waste" />
+                        <MenuItem fx:id="viewrReportsMenu" mnemonicParsing="false" text="Reports" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                      <MenuItem fx:id="aboutMenu" mnemonicParsing="false" text="About" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <left>
+            <VBox BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" />
+               </BorderPane.margin>
+               <children>
+                  <Button fx:id="searchItemButton" mnemonicParsing="false" onAction="#loadItemtable" prefHeight="31.0" prefWidth="130.0" text="Search Item">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="viewItemDetailsButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#SupplierAndItems" prefHeight="35.0" prefWidth="130.0" text="View Suppliers">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="updateInventoryButton" layoutX="10.0" layoutY="50.0" mnemonicParsing="false" onAction="#loadInventory" prefHeight="33.0" prefWidth="130.0" text="Update Inventory">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="wasteManagementButton" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onAction="#addWaste" prefHeight="33.0" prefWidth="130.0" text="Waste Management">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="addremoveItemButton" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onAction="#loadAddItem" prefHeight="37.0" prefWidth="130.0" text="Add Items">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="orderListButton" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onAction="#orderList" prefHeight="33.0" prefWidth="130.0" text="Make Order List">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="orderListButton1" layoutX="10.0" layoutY="184.0" mnemonicParsing="false" onAction="#order" prefHeight="33.0" prefWidth="130.0" text="View Order List">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button layoutX="15.0" layoutY="347.0" mnemonicParsing="false" onAction="#CountDeliveredStock" prefHeight="25.0" prefWidth="135.0" text="Check Delivered Items" />
+                  <Button fx:id="vendorsButton" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#loadVendor" prefHeight="32.0" prefWidth="130.0" text="Vendors">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="Location" layoutX="10.0" layoutY="249.0" mnemonicParsing="false" onAction="#location" prefHeight="32.0" prefWidth="130.0" text="ItemLocation">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="adduser" layoutX="15.0" layoutY="345.0" mnemonicParsing="false" onAction="#adduser" prefHeight="32.0" prefWidth="130.0" text="Add Authorized User" />
+                  <Button fx:id="signoutButton" mnemonicParsing="false" onAction="#signOut" prefHeight="31.0" prefWidth="130.0" text="Sign Out">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <Pane prefHeight="361.0" prefWidth="465.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" prefHeight="110.0" prefWidth="352.0" text="Inventory Management System" textFill="#c33a3a">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="219.0" fitWidth="390.0" layoutX="36.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Inventory.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <Label layoutX="348.0" layoutY="353.0" prefHeight="17.0" prefWidth="183.0" text="Developed by : B&amp;P">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="38.0" layoutY="273.0" prefHeight="17.0" prefWidth="395.0" text="Welcome" textFill="#bf1f1f">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="11.0" layoutY="8.0" orientation="VERTICAL" prefHeight="359.0" prefWidth="0.0" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
